@@ -2,12 +2,17 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/tx
-	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	<context:annotation-config/>
+
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<!--  
 		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
@@ -34,5 +39,15 @@
 	
 	<bean id="changePwdSvc" class="member.service.ChangePasswordService">
 		<constructor-arg ref="memberDao"/>
+	</bean>
+	
+	<bean id="memberPrinter" class="member.printer.MemberPrinter"/>
+	<bean id="memberRegSvc" class="member.service.MemberRegisterService"/>
+	<bean id="memberInfoPrinter" class="member.printer.MemberInfoPrinter"/>
+	<bean id="memberListPrinter" class="member.printer.MemberListPrinter"/>
+	
+	<bean id="versionPrinter" class="member.printer.VersionPrinter">
+		<property name="majorVersion" value="4"/>
+		<property name="minorVersion" value="1"/>
 	</bean>
 </beans>
