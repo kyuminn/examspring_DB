@@ -59,3 +59,125 @@
 2021-12-13 14:58:27,802  INFO [log4jdbc.log4j2] 1. Connection.getWarnings() returned null
 2021-12-13 14:58:27,803  INFO [log4jdbc.log4j2] 1. Connection.clearWarnings() returned 
 2021-12-13 14:58:27,803  INFO [log4jdbc.log4j2] 1. Connection.getAutoCommit() returned true
+2021-12-13 15:41:15,189  INFO [log4jdbc.log4j2] 1. Connection opened. {executed in 539ms} 
+2021-12-13 15:41:15,189  INFO [log4jdbc.log4j2] 3. Connection opened. {executed in 539ms} 
+2021-12-13 15:41:15,189  INFO [log4jdbc.log4j2] 2. Connection opened. {executed in 539ms} 
+2021-12-13 15:41:15,192  INFO [log4jdbc.log4j2] 1. Connection.new Connection returned 
+2021-12-13 15:41:15,192  INFO [log4jdbc.log4j2] 3. Connection.new Connection returned 
+2021-12-13 15:41:15,192  INFO [log4jdbc.log4j2] 2. Connection.new Connection returned 
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 2. Connection.getTransactionIsolation() returned 2
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 1. Connection.getTransactionIsolation() returned 2
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 3. Connection.getTransactionIsolation() returned 2
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 2. Connection.getCatalog() returned null
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 1. Connection.getCatalog() returned null
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 3. Connection.getCatalog() returned null
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 2. Connection.getHoldability() returned 1
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 1. Connection.getHoldability() returned 1
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 3. Connection.getHoldability() returned 1
+2021-12-13 15:41:15,193  INFO [log4jdbc.log4j2] 2. Connection.isReadOnly() returned false
+2021-12-13 15:41:15,194  INFO [log4jdbc.log4j2] 1. Connection.isReadOnly() returned false
+2021-12-13 15:41:15,194  INFO [log4jdbc.log4j2] 3. Connection.isReadOnly() returned false
+2021-12-13 15:41:15,194  INFO [log4jdbc.log4j2] 2. Connection.getTypeMap() returned {}
+2021-12-13 15:41:15,194  INFO [log4jdbc.log4j2] 1. Connection.getTypeMap() returned {}
+2021-12-13 15:41:15,194  INFO [log4jdbc.log4j2] 3. Connection.getTypeMap() returned {}
+2021-12-13 15:41:15,198  INFO [log4jdbc.log4j2] 3. Connection.getWarnings() returned null
+2021-12-13 15:41:15,198  INFO [log4jdbc.log4j2] 1. Connection.getWarnings() returned null
+2021-12-13 15:41:15,198  INFO [log4jdbc.log4j2] 2. Connection.getWarnings() returned null
+2021-12-13 15:41:15,199  INFO [log4jdbc.log4j2] 1. Connection.clearWarnings() returned 
+2021-12-13 15:41:15,199  INFO [log4jdbc.log4j2] 3. Connection.clearWarnings() returned 
+2021-12-13 15:41:15,199  INFO [log4jdbc.log4j2] 2. Connection.clearWarnings() returned 
+2021-12-13 15:41:15,199  INFO [log4jdbc.log4j2] 3. Connection.getAutoCommit() returned true
+2021-12-13 15:41:15,199  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:41:15,199  INFO [log4jdbc.log4j2] 1. Connection.getAutoCommit() returned true
+2021-12-13 15:41:15,201  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:41:15,202  INFO [log4jdbc.log4j2] 2. Connection.setAutoCommit(false) returned 
+2021-12-13 15:41:15,279  INFO [log4jdbc.log4j2] 2. PreparedStatement.new PreparedStatement returned 
+2021-12-13 15:41:15,279  INFO [log4jdbc.log4j2] 2. Connection.prepareStatement(select * from member where email=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@58a9760d
+2021-12-13 15:41:15,282  INFO [log4jdbc.log4j2] 2. PreparedStatement.setString(1, "paraday@naver.com") returned 
+2021-12-13 15:41:15,334  INFO [log4jdbc.log4j2] 2. select * from member where email='paraday@naver.com'  {executed in 49 ms}
+2021-12-13 15:41:15,337  INFO [log4jdbc.log4j2] 2. ResultSet.new ResultSet returned 
+2021-12-13 15:41:15,337  INFO [log4jdbc.log4j2] 2. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@3a44431a
+2021-12-13 15:41:15,342  INFO [log4jdbc.log4j2] 2. ResultSet.next() returned true
+2021-12-13 15:41:15,343  INFO [log4jdbc.log4j2] 2. ResultSet.getLong(id) returned 1
+2021-12-13 15:41:15,343  INFO [log4jdbc.log4j2] 2. ResultSet.getString(email) returned paraday@naver.com
+2021-12-13 15:41:15,343  INFO [log4jdbc.log4j2] 2. ResultSet.getString(name) returned pkm
+2021-12-13 15:41:15,343  INFO [log4jdbc.log4j2] 2. ResultSet.getString(password) returned 0x1.bcaf896b0ac5dp-1
+2021-12-13 15:41:15,343  INFO [log4jdbc.log4j2] 2. ResultSet.getDate(regdate) returned 2021-12-13
+2021-12-13 15:41:15,345  INFO [log4jdbc.log4j2] 
+|---|------------------|---------------------|-----|-----------|
+|id |email             |password             |name |regdate    |
+|---|------------------|---------------------|-----|-----------|
+|1  |paraday@naver.com |0x1.bcaf896b0ac5dp-1 |pkm  |2021-12-13 |
+|---|------------------|---------------------|-----|-----------|
+
+2021-12-13 15:41:15,346  INFO [log4jdbc.log4j2] 2. ResultSet.next() returned false
+2021-12-13 15:41:15,348  INFO [log4jdbc.log4j2] 2. ResultSet.close() returned void
+2021-12-13 15:41:15,348  INFO [log4jdbc.log4j2] 2. PreparedStatement.close() returned 
+2021-12-13 15:41:15,349  INFO [log4jdbc.log4j2] 2. Connection.rollback() returned 
+2021-12-13 15:41:15,349  INFO [log4jdbc.log4j2] 2. Connection.setAutoCommit(true) returned 
+2021-12-13 15:41:15,349  INFO [log4jdbc.log4j2] 2. Connection.isReadOnly() returned false
+2021-12-13 15:41:15,350  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:41:15,350  INFO [log4jdbc.log4j2] 2. Connection.getWarnings() returned null
+2021-12-13 15:41:15,350  INFO [log4jdbc.log4j2] 2. Connection.clearWarnings() returned 
+2021-12-13 15:41:15,351  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:42:54,851  INFO [log4jdbc.log4j2] 3. Connection opened. {executed in 548ms} 
+2021-12-13 15:42:54,851  INFO [log4jdbc.log4j2] 2. Connection opened. {executed in 548ms} 
+2021-12-13 15:42:54,851  INFO [log4jdbc.log4j2] 1. Connection opened. {executed in 548ms} 
+2021-12-13 15:42:54,852  INFO [log4jdbc.log4j2] 3. Connection.new Connection returned 
+2021-12-13 15:42:54,852  INFO [log4jdbc.log4j2] 2. Connection.new Connection returned 
+2021-12-13 15:42:54,852  INFO [log4jdbc.log4j2] 1. Connection.new Connection returned 
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 3. Connection.getTransactionIsolation() returned 2
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 2. Connection.getTransactionIsolation() returned 2
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 1. Connection.getTransactionIsolation() returned 2
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 3. Connection.getCatalog() returned null
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 2. Connection.getCatalog() returned null
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 1. Connection.getCatalog() returned null
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 3. Connection.getHoldability() returned 1
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 2. Connection.getHoldability() returned 1
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 3. Connection.isReadOnly() returned false
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 1. Connection.getHoldability() returned 1
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 2. Connection.isReadOnly() returned false
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 3. Connection.getTypeMap() returned {}
+2021-12-13 15:42:54,854  INFO [log4jdbc.log4j2] 1. Connection.isReadOnly() returned false
+2021-12-13 15:42:54,855  INFO [log4jdbc.log4j2] 2. Connection.getTypeMap() returned {}
+2021-12-13 15:42:54,855  INFO [log4jdbc.log4j2] 1. Connection.getTypeMap() returned {}
+2021-12-13 15:42:54,859  INFO [log4jdbc.log4j2] 1. Connection.getWarnings() returned null
+2021-12-13 15:42:54,859  INFO [log4jdbc.log4j2] 2. Connection.getWarnings() returned null
+2021-12-13 15:42:54,859  INFO [log4jdbc.log4j2] 3. Connection.getWarnings() returned null
+2021-12-13 15:42:54,859  INFO [log4jdbc.log4j2] 1. Connection.clearWarnings() returned 
+2021-12-13 15:42:54,859  INFO [log4jdbc.log4j2] 3. Connection.clearWarnings() returned 
+2021-12-13 15:42:54,859  INFO [log4jdbc.log4j2] 2. Connection.clearWarnings() returned 
+2021-12-13 15:42:54,860  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:42:54,860  INFO [log4jdbc.log4j2] 3. Connection.getAutoCommit() returned true
+2021-12-13 15:42:54,860  INFO [log4jdbc.log4j2] 1. Connection.getAutoCommit() returned true
+2021-12-13 15:42:54,863  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:42:54,863  INFO [log4jdbc.log4j2] 2. Connection.setAutoCommit(false) returned 
+2021-12-13 15:42:54,943  INFO [log4jdbc.log4j2] 2. PreparedStatement.new PreparedStatement returned 
+2021-12-13 15:42:54,943  INFO [log4jdbc.log4j2] 2. Connection.prepareStatement(select * from member where email=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6853425f
+2021-12-13 15:42:54,946  INFO [log4jdbc.log4j2] 2. PreparedStatement.setString(1, "paraday@naver.com") returned 
+2021-12-13 15:42:54,995  INFO [log4jdbc.log4j2] 2. select * from member where email='paraday@naver.com'  {executed in 48 ms}
+2021-12-13 15:42:55,000  INFO [log4jdbc.log4j2] 2. ResultSet.new ResultSet returned 
+2021-12-13 15:42:55,000  INFO [log4jdbc.log4j2] 2. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6c0d9d86
+2021-12-13 15:42:55,005  INFO [log4jdbc.log4j2] 2. ResultSet.next() returned true
+2021-12-13 15:42:55,005  INFO [log4jdbc.log4j2] 2. ResultSet.getLong(id) returned 1
+2021-12-13 15:42:55,005  INFO [log4jdbc.log4j2] 2. ResultSet.getString(email) returned paraday@naver.com
+2021-12-13 15:42:55,005  INFO [log4jdbc.log4j2] 2. ResultSet.getString(name) returned pkm
+2021-12-13 15:42:55,005  INFO [log4jdbc.log4j2] 2. ResultSet.getString(password) returned 0x1.bcaf896b0ac5dp-1
+2021-12-13 15:42:55,006  INFO [log4jdbc.log4j2] 2. ResultSet.getDate(regdate) returned 2021-12-13
+2021-12-13 15:42:55,007  INFO [log4jdbc.log4j2] 
+|---|------------------|---------------------|-----|-----------|
+|id |email             |password             |name |regdate    |
+|---|------------------|---------------------|-----|-----------|
+|1  |paraday@naver.com |0x1.bcaf896b0ac5dp-1 |pkm  |2021-12-13 |
+|---|------------------|---------------------|-----|-----------|
+
+2021-12-13 15:42:55,007  INFO [log4jdbc.log4j2] 2. ResultSet.next() returned false
+2021-12-13 15:42:55,009  INFO [log4jdbc.log4j2] 2. ResultSet.close() returned void
+2021-12-13 15:42:55,009  INFO [log4jdbc.log4j2] 2. PreparedStatement.close() returned 
+2021-12-13 15:42:55,010  INFO [log4jdbc.log4j2] 2. Connection.rollback() returned 
+2021-12-13 15:42:55,010  INFO [log4jdbc.log4j2] 2. Connection.setAutoCommit(true) returned 
+2021-12-13 15:42:55,011  INFO [log4jdbc.log4j2] 2. Connection.isReadOnly() returned false
+2021-12-13 15:42:55,011  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
+2021-12-13 15:42:55,011  INFO [log4jdbc.log4j2] 2. Connection.getWarnings() returned null
+2021-12-13 15:42:55,012  INFO [log4jdbc.log4j2] 2. Connection.clearWarnings() returned 
+2021-12-13 15:42:55,012  INFO [log4jdbc.log4j2] 2. Connection.getAutoCommit() returned true
