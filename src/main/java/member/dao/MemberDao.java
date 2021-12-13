@@ -1,14 +1,18 @@
 package member.dao;
 
-import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
+import member.pstmtCreator.PreparedStatementCreator;
 import member.rowMapper.MemberRowMapper;
 import member.vo.MemberVo;
 
@@ -72,6 +76,26 @@ public class MemberDao {
 	public void update(MemberVo vo) {
 		String sql="update member set name=?, password=? where email=?";
 		jdbcTemplate.update(sql, vo.getName(), vo.getPassword(), vo.getEmail());
+	}
+	
+	// pstmt creator 사용해보기
+	public void insert(final MemberVo vo) {
+		KeyHolder keyHolder= new GeneratedKeyHolder();
+		String sql="insert into member values(member_seq.nextval,?,?,?,?)";
+		PreparedStatementCreator psc = new PreparedStatementCreator() {
+			@Override
+			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
+				PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"id"});
+				pstmt.setString(1, vo.getEmail());
+				pstmt.setString(2, vo.getPassword());
+				pstmt.setString(3, vo.getName());
+				pstmt.setTimestamp(4, new Timestamp(vo.getRegdate().getTime()));
+				return pstmt;
+			}
+		};
+		jdbcTemplate.update(sql,psc,keyHolder);
+		Number keyValue= keyHolder.getKey();
+		vo.setId(keyValue.longValue());
 	}
 	
 }
