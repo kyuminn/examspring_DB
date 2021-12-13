@@ -10,6 +10,7 @@
   </properties>
   
   <dependencies>
+    <!-- test -->
   	<!-- 의존 라이브러리 등록 
   	여기에 등록하면 이클립스가 알아서 다운받아서 빌드패스까지 해줌-->
   	<!-- Spring framework 라이브러리 등록
