@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
-import member.pstmtCreator.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import member.rowMapper.MemberRowMapper;
 import member.vo.MemberVo;
 
@@ -80,21 +80,22 @@ public class MemberDao {
 	
 	// pstmt creator 사용해보기
 	public void insert(final MemberVo vo) {
-		KeyHolder keyHolder= new GeneratedKeyHolder();
+
 		String sql="insert into member values(member_seq.nextval,?,?,?,?)";
-		PreparedStatementCreator psc = new PreparedStatementCreator() {
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		jdbcTemplate.update(new PreparedStatementCreator() {
+
 			@Override
 			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
-				PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"id"});
+				PreparedStatement pstmt = conn.prepareStatement(sql,new String[] {"id"});
 				pstmt.setString(1, vo.getEmail());
 				pstmt.setString(2, vo.getPassword());
 				pstmt.setString(3, vo.getName());
 				pstmt.setTimestamp(4, new Timestamp(vo.getRegdate().getTime()));
 				return pstmt;
 			}
-		};
-		jdbcTemplate.update(sql,psc,keyHolder);
-		Number keyValue= keyHolder.getKey();
+		}, keyHolder);
+		Number keyValue = keyHolder.getKey();
 		vo.setId(keyValue.longValue());
 	}
 	
